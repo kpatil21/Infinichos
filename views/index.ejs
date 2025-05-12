@@ -1,0 +1,35 @@
+<div class="author">
+ <h1 class="author__heading">Connecting Souls.</h1>
+ <p class="author__body">A journey back to wholeness, balance, and inner stillness,<br>
+Welcome to a space dedicated to restoring the fragmented soul—a call to reconnect with your spirit and walk the quiet path of shunya (inner stillness).
+In a world obsessed with hustle and survival, we often lose sight of who we truly are. True spirituality isn’t about escaping to the mountains—it’s about being fully present in everyday life, rooted in purpose, and connected to the soul while thriving in the modern world.
+Through my own karmic journey from late 2019 to 2024, I discovered that we can live as inner renunciates while embracing the joy, love, and fullness of worldly life.
+This is an invitation to rise—not at the end of life, but right now—grounded in self, aligned with purpose, and at peace within.<br>
+
+
+</p>
+</div>
+
+<img src="/img/Life_purpose.png" alt="person looking out" class="Life-purpose" width="981" height="528">
+
+<section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+        
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+        </li>
+        <% }) %>
+       
+    </ul>
+
+    <% if (nextPage !== null) { %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; view Older Posts</a>
+    <% } %>
+
+
+</section>
